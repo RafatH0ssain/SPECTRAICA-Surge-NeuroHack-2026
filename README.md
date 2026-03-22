@@ -32,30 +32,6 @@ SPECTRA-ICA outperforms standard ICA on **all 7 evaluation metrics** in a P300 o
 - **Cohen's d = 0.703** (medium effect size)
 - **6/10 subjects improved**
 
-## Repository Structure
-
-```
-├── icas.py                          # Core SPECTRA-ICA implementation
-│                                    #   spectra_clean() — temporal + spectral gating
-│                                    #   tame_clean()    — temporal-only gating
-├── spectra_ica_proof.py             # P300 LOPOCV benchmark (ICA vs SPECTRA-ICA)
-├── report.md                        # Full research report
-├── bench95.py                       # Extended benchmark suite
-├── novel_eeg_classifier.py          # EEG classifier experiments
-├── psd_eval.py                      # PSD-based signal quality evaluation
-├── quick_eval.py                    # Quick evaluation script
-├── lr_eval.py                       # Logistic regression evaluation
-├── build_flickeroddball_caches.py   # Epoch cache builder (FlickerOddball)
-├── build_ssvep_ica_caches.py        # Epoch cache builder (SSVEP)
-├── eeg_data/                        # Raw EEG recordings (.fif)
-│   ├── Flicker/                     # SSVEP paradigm (10 subjects)
-│   ├── Oddball/                     # Auditory oddball paradigm (10 subjects)
-│   └── FlickerOddball/             # Combined paradigm (10 subjects)
-└── results/                         # Outputs
-    ├── ica/                         # Pre-fitted ICA decompositions
-    └── epoch_cache/                 # Cached epoch arrays (.npz)
-```
-
 ## Dataset
 
 NeuroHack 2026 EEG dataset: **10 subjects × 3 paradigms = 30 sessions**, recorded at 1000 Hz with 30 EEG channels.
