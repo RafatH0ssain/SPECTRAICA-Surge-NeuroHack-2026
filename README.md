@@ -42,27 +42,6 @@ NeuroHack 2026 EEG dataset: **10 subjects × 3 paradigms = 30 sessions**, record
 | Oddball | Three-stimulus auditory oddball (P300) |
 | FlickerOddball | Concurrent SSVEP + auditory oddball |
 
-## Quick Start
-
-```bash
-# Install dependencies
-pip install mne mne-icalabel scikit-learn scipy pyriemann numpy
-
-# Run the P300 benchmark (ICA vs SPECTRA-ICA)
-python spectra_ica_proof.py
-
-# Use SPECTRA-ICA in your own pipeline
-python -c "
-import mne
-from icas import spectra_clean
-
-raw = mne.io.read_raw_fif('eeg_data/Oddball/sub-010_Oddball_eeg.fif', preload=True)
-raw.filter(1, 40)
-ica = mne.preprocessing.read_ica('results/ica/sub-010_Oddball-ica.fif')
-cleaned = spectra_clean(raw, ica)
-"
-```
-
 ## Methods
 
 1. **ICA decomposition** — 20-component Infomax ICA (pre-fitted)
