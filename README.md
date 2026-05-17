@@ -2,6 +2,8 @@
 
 **NeuroHack 2026 — Team Surge**
 
+*SPECTRA-ICA received **1st Place in the Machine Learning Category** at **SURGE NeuroHack 2026**.*
+
 ---
 
 ## Overview
